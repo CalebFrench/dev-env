@@ -1,0 +1,29 @@
+{
+  "name": "dev-env",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/main.js",
+  "bin": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "tsc && pkg -C GZip ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "pkg": {
+    "scripts": "dist/**/*.js",
+    "targets": [
+      "latest-win-x64"
+    ],
+    "outputPath": "out"
+  },
+  "dependencies": {
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.4"
+  }
+}
